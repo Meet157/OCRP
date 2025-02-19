@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="userMasterPage.master.cs" Inherits="User_userMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #form1
+        {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+       
+    
+        <asp:Panel ID="Panel1" runat="server" BackImageUrl="~/Images/dinner.jpg" 
+            Height="380px">
+            <br />  <table class="style2">
+            <tr>
+                <td class="style4">
+                    &nbsp<asp:Button ID="Button1" runat="server" Text="Home" Font-Bold="True" 
+                        Font-Size="X-Large" Width="240px" Height="52px" BackColor="#990033" 
+                        onclick="Button1_Click" PostBackUrl="" 
+                     /></td>
+                <td>
+                   <asp:Button ID="Button3" runat="server" Text="Recipes" 
+                        Font-Bold="True" Font-Size="X-Large"  Width="240px" Height="52px" 
+                        BackColor="#990033" onclick="Button3_Click" PostBackUrl="" 
+                        /></td>
+                         <td>
+                    <asp:Button ID="Button6" runat="server" Text="Add Recipe" BackColor="#990033" 
+                        Font-Bold="True" Font-Size="X-Large"  Width="240px" Height="52px" 
+                                 onclick="Button6_Click" PostBackUrl="" /></td>
+                <td>
+                    <asp:Button ID="Button4" runat="server" Text="About Us" BackColor="#990033" 
+                        Font-Bold="True" Font-Size="X-Large" Width="240px" Height="52px" 
+                        onclick="Button4_Click"  /></td>
+                      
+                          <td class="style3">
+                  <asp:Button ID="Button2" runat="server" Text="Login" Font-Bold="True" BackColor="#990033" 
+                        Font-Size="X-Large" Width="140px" Height="50px" onclick="Button2_Click" 
+                                  PostBackUrl="~/Admin/admin_login.aspx" />
+                           
+                        <asp:Button ID="Button5" runat="server" Text="Logout" Font-Bold="True" BackColor="#990033" 
+                        Font-Size="X-Large" Width="140px" Height="50px" onclick="Button5_Click"/>
+                                 
+                </td>
+                <td>
+                <asp:ImageButton ID="ImageButton3" runat="server" Height="40px" 
+            ImageUrl="~/Images/hearticon.jpeg" onclick="ImageButton3_Click" Width="55px" />
+                </td>
+            </tr>
+        </table>
+        </asp:Panel>
+        <br />
+       
+        <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+     <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
+
+
+
+<%--<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>--%>
